@@ -1,3 +1,6 @@
+import '@/app/ui/global.css'
+import { noto_sans_thai } from './ui/fonts';
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${noto_sans_thai.className} antialiased`}>{children}</body>
     </html>
   );
 }
