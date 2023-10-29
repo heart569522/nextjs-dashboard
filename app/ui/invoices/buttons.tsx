@@ -26,12 +26,13 @@ export function UpdateInvoice({ id }: { id: string }) {
 }
 
 export function DeleteInvoice({ id }: { id: string }) {
-  return (
-    <form action={deleteInvoice}>
-      <input type="hidden" name="id" value={id} />
-      <button className="rounded-md border p-1">
-        <TrashIcon className="w-4" />
-      </button>
-    </form>
-  );
+	return (
+		<form action={deleteInvoice}>
+			<input type='hidden' name='id' value={id} />
+			<button className='rounded-md border p-2 hover:bg-gray-100'>
+				<span className='sr-only'>Delete</span>
+				<TrashIcon className='w-5' />
+			</button>
+		</form>
+	);
 }
